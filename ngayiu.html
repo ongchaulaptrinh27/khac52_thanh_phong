@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm ngày yêu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* ✅ Nút quay lại cố định trên cùng bên trái */
+        #back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        #back-button button {
+            padding: 10px 16px;
+            font-size: 14px;
+            background-color: #f8b6c2;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        #back-button button:hover {
+            background-color: #f58aa8;
+        }
+    </style>
+</head>
+
+<body onclick="playAudio()">
+    <!-- ✅ Nút quay lại ở trên cùng -->
+    <div id="back-button">
+        <a href="./page3.html">
+            <button>🔙 Quay lại</button>
+        </a>
+    </div>
+
+    <canvas id="c" width="948" height="586"></canvas>
+
+    <div id="wrapper">
+        <h1>Đếm ngày yêu</h1>
+
+        <div id="info">
+            <div class="one">
+                <img src="https://i.pinimg.com/originals/c6/7f/d9/c67fd9080d3b0a28c508b50492078abf.gif" class="avt">
+                <p>Love me</p>
+            </div>
+            <div id="heart">
+                ❤
+                <date>0</date>
+                <b>Ngày rùi nè..</b>
+            </div>
+            <div class="two">
+                <img src="https://img2.thuthuatphanmem.vn/uploads/2018/12/31/hinh-dong-dang-yeu-va-dep_112054848.gif" class="avt">
+                <p>Love you</p>
+            </div>
+        </div>
+
+        <div id="clock-box">
+            <div id="clock">
+                <div class="time-container">
+                    <div class="time-part" id="hours">00</div>:
+                    <div class="time-part" id="minutes">00</div>:
+                    <div class="time-part" id="seconds">00</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Nhạc tự phát khi nhấn vào màn hình -->
+        <audio id="myAudio">
+            <source src="./ST.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
